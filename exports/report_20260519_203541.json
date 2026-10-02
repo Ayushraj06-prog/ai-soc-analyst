@@ -1,0 +1,75 @@
+{
+    "meta_threats": [
+        {
+            "meta_alert": "Active SSH Brute Force Campaign",
+            "severity": "CRITICAL",
+            "confidence": "HIGH CONFIDENCE",
+            "description": "Target has an exposed SSH port (22) AND is actively receiving numerous failed login attempts."
+        },
+        {
+            "meta_alert": "Phishing & Credential Stuffing Attack",
+            "severity": "CRITICAL",
+            "confidence": "MEDIUM CONFIDENCE",
+            "description": "A high-risk phishing URL was detected concurrently with multiple failed logins, suggesting stolen credentials are being tested."
+        }
+    ],
+    "alerts": [
+        {
+            "alert_id": "ALERT-5829",
+            "timestamp": "[2026-05-19 20:35:30]",
+            "module": "url_checker",
+            "source": "http://www.secure-login-update.com",
+            "severity": "CRITICAL",
+            "attack_type": "Phishing / Social Engineering",
+            "risk_score": 75,
+            "evidence": [
+                "Suspicious keyword found: 'login'",
+                "Suspicious keyword found: 'secure'",
+                "Suspicious keyword found: 'update'"
+            ],
+            "recommended_action": "Block immediately. Investigate potential internal clicks via proxy logs."
+        },
+        {
+            "alert_id": "ALERT-8090",
+            "timestamp": "[2026-05-19 20:35:30]",
+            "module": "log_analyzer",
+            "source": "192.168.1.100",
+            "severity": "HIGH",
+            "attack_type": "Brute-Force Attack",
+            "risk_score": 80,
+            "evidence": [
+                "5 failed login attempts detected."
+            ],
+            "recommended_action": "Block IP on firewall. Monitor for successful logins."
+        },
+        {
+            "alert_id": "ALERT-8065",
+            "timestamp": "[2026-05-19 20:35:41]",
+            "module": "port_scanner",
+            "source": "127.0.0.1",
+            "severity": "CRITICAL",
+            "attack_type": "Critical Service Exposure",
+            "risk_score": 95,
+            "evidence": [
+                "Port 445 is OPEN (SMB (Windows File Sharing) - Extremely risky if exposed to internet.)"
+            ],
+            "recommended_action": "IMMEDIATELY block this port on the external firewall. Use a VPN for access.",
+            "open_ports": [
+                445
+            ]
+        },
+        {
+            "alert_id": "ALERT-7056",
+            "timestamp": "[2026-05-19 20:35:41]",
+            "module": "port_scanner",
+            "source": "192.168.1.100",
+            "severity": "HIGH",
+            "attack_type": "Risky Service Exposure",
+            "risk_score": 75,
+            "evidence": [
+                "Port 22 is OPEN (SSH)"
+            ],
+            "recommended_action": "Restrict access to trusted IPs only."
+        }
+    ]
+}

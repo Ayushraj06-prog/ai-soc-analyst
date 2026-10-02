@@ -1,0 +1,2 @@
+{"EventID":4625,"TimeCreated":{"SystemTime":"2026-10-01T10:20:00Z"},"Computer":"LAB-WIN01","EventData":{"TargetUserName":"demo-user","IpAddress":"192.0.2.30"}}
+{"System":{"EventID":9999,"TimeCreated":{"SystemTime":"2026-10-01T10:21:00Z"},"Computer":"LAB-WIN01"},"EventData":{"SubjectUserName":"demo-user"}}

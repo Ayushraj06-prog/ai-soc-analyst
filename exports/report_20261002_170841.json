@@ -1,0 +1,122 @@
+{
+    "meta_threats": [
+        {
+            "meta_alert": "Active SSH Brute Force Campaign",
+            "severity": "CRITICAL",
+            "confidence": "HIGH CONFIDENCE",
+            "description": "Target has an exposed SSH port (22) AND is actively receiving numerous failed login attempts."
+        },
+        {
+            "meta_alert": "Phishing & Credential Stuffing Attack",
+            "severity": "CRITICAL",
+            "confidence": "MEDIUM CONFIDENCE",
+            "description": "A high-risk phishing URL was detected concurrently with multiple failed logins, suggesting stolen credentials are being tested."
+        }
+    ],
+    "alerts": [
+        {
+            "alert_id": "alert_be760b7fefe3f315",
+            "timestamp": "2026-10-02T11:38:30.017082+00:00",
+            "module": "url_checker",
+            "source": "http://www.secure-login-update.com",
+            "severity": "CRITICAL",
+            "attack_type": "Phishing / Social Engineering",
+            "risk_score": 75,
+            "evidence": [
+                "Suspicious keyword found: 'login'",
+                "Suspicious keyword found: 'secure'",
+                "Suspicious keyword found: 'update'"
+            ],
+            "recommended_action": "Block immediately. Investigate potential internal clicks via proxy logs.",
+            "open_ports": [],
+            "confidence": null,
+            "rule_id": null,
+            "mitre": null,
+            "status": "NEW",
+            "id": "alert_be760b7fefe3f315",
+            "title": "Phishing / Social Engineering",
+            "explanation": "",
+            "mitre_techniques": [],
+            "mitre_tactics": [],
+            "evidence_refs": [],
+            "grouping_key": null
+        },
+        {
+            "alert_id": "alert_a32a6d5f42a53495",
+            "timestamp": "2026-10-02T11:38:30.017487+00:00",
+            "module": "log_analyzer",
+            "source": "192.168.1.100",
+            "severity": "HIGH",
+            "attack_type": "Brute-Force Attack",
+            "risk_score": 80,
+            "evidence": [
+                "5 failed login attempts detected."
+            ],
+            "recommended_action": "Block IP on firewall. Monitor for successful logins.",
+            "open_ports": [],
+            "confidence": null,
+            "rule_id": null,
+            "mitre": null,
+            "status": "NEW",
+            "id": "alert_a32a6d5f42a53495",
+            "title": "Brute-Force Attack",
+            "explanation": "",
+            "mitre_techniques": [],
+            "mitre_tactics": [],
+            "evidence_refs": [],
+            "grouping_key": null
+        },
+        {
+            "alert_id": "alert_7ab473e6abebd8c2",
+            "timestamp": "2026-10-02T11:38:41.155625+00:00",
+            "module": "port_scanner",
+            "source": "127.0.0.1",
+            "severity": "CRITICAL",
+            "attack_type": "Critical Service Exposure",
+            "risk_score": 95,
+            "evidence": [
+                "Port 445 is OPEN (SMB (Windows File Sharing) - Extremely risky if exposed to internet.)"
+            ],
+            "recommended_action": "IMMEDIATELY block this port on the external firewall. Use a VPN for access.",
+            "open_ports": [
+                445
+            ],
+            "confidence": null,
+            "rule_id": null,
+            "mitre": null,
+            "status": "NEW",
+            "id": "alert_7ab473e6abebd8c2",
+            "title": "Critical Service Exposure",
+            "explanation": "",
+            "mitre_techniques": [],
+            "mitre_tactics": [],
+            "evidence_refs": [],
+            "grouping_key": null
+        },
+        {
+            "alert_id": "alert_eb850d7f7cc323f4",
+            "timestamp": "2026-10-02T11:38:41.155746+00:00",
+            "module": "port_scanner",
+            "source": "192.168.1.100",
+            "severity": "HIGH",
+            "attack_type": "Risky Service Exposure",
+            "risk_score": 75,
+            "evidence": [
+                "Port 22 is OPEN (SSH)"
+            ],
+            "recommended_action": "Restrict access to trusted IPs only.",
+            "open_ports": [],
+            "confidence": null,
+            "rule_id": null,
+            "mitre": null,
+            "status": "NEW",
+            "id": "alert_eb850d7f7cc323f4",
+            "title": "Risky Service Exposure",
+            "explanation": "",
+            "mitre_techniques": [],
+            "mitre_tactics": [],
+            "evidence_refs": [],
+            "grouping_key": null
+        }
+    ]
+}

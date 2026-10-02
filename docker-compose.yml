@@ -1,0 +1,55 @@
+services:
+  backend:
+    build:
+      context: .
+      labels:
+        org.opencontainers.image.version: "0.10.0"
+    environment:
+      SOC_ENVIRONMENT: production
+      SOC_DATA_DIR: /data
+      SOC_DATABASE_PATH: /data/soc.db
+      API_HOST: 0.0.0.0
+      API_AUTH_ENABLED: "true"
+      API_AUTH_TOKEN: ${API_AUTH_TOKEN:?API_AUTH_TOKEN must be supplied at runtime}
+      API_CORS_ORIGINS: ${API_CORS_ORIGINS:-http://localhost:8080}
+      API_DOCS_ENABLED: "false"
+      API_AUTO_MIGRATE: "false"
+    volumes:
+      - soc-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,noexec,nosuid,nodev
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    expose:
+      - "8000"
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,noexec,nosuid,nodev
+      - /var/cache/nginx:size=16m
+      - /var/run:size=8m
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  soc-data:

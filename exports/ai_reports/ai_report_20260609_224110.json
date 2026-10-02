@@ -1,0 +1,98 @@
+{
+    "timestamp": "2026-06-09T22:41:10.384759",
+    "ai_analysis_raw": "Error: Failed to connect to Ollama or generate response: model 'llama3' not found (status code: 404)\n\nPlease ensure Ollama is running on your machine and the model 'llama3' is downloaded (run `ollama run llama3`).",
+    "correlations": [],
+    "classifications": [
+        {
+            "alert_id": "ALERT-3899",
+            "classification": {
+                "incident_type": "Initial Access",
+                "mitre_id": "T1566",
+                "technique": "Phishing"
+            }
+        },
+        {
+            "alert_id": "ALERT-7906",
+            "classification": {
+                "incident_type": "Unknown/Unclassified",
+                "mitre_id": "Unknown",
+                "technique": "Suspicious Login Activity"
+            }
+        },
+        {
+            "alert_id": "ALERT-1999",
+            "classification": {
+                "incident_type": "Unknown/Unclassified",
+                "mitre_id": "Unknown",
+                "technique": "Critical Service Exposure"
+            }
+        },
+        {
+            "alert_id": "ALERT-5054",
+            "classification": {
+                "incident_type": "Lateral Movement",
+                "mitre_id": "T1021",
+                "technique": "Remote Services"
+            }
+        }
+    ],
+    "alerts": [
+        {
+            "alert_id": "ALERT-3899",
+            "timestamp": "[2026-06-09 22:40:59]",
+            "module": "url_checker",
+            "source": "http://www.secure-login-update.com",
+            "severity": "CRITICAL",
+            "attack_type": "Phishing / Social Engineering",
+            "risk_score": 75,
+            "evidence": [
+                "Suspicious keyword found: 'login'",
+                "Suspicious keyword found: 'secure'",
+                "Suspicious keyword found: 'update'"
+            ],
+            "recommended_action": "Block immediately. Investigate potential internal clicks via proxy logs."
+        },
+        {
+            "alert_id": "ALERT-7906",
+            "timestamp": "[2026-06-09 22:40:59]",
+            "module": "log_analyzer",
+            "source": "192.168.1.100",
+            "severity": "MEDIUM",
+            "attack_type": "Suspicious Login Activity",
+            "risk_score": 50,
+            "evidence": [
+                "3 failed login attempts. Potential password guessing."
+            ],
+            "recommended_action": "Monitor IP. Require MFA for affected accounts."
+        },
+        {
+            "alert_id": "ALERT-1999",
+            "timestamp": "[2026-06-09 22:41:10]",
+            "module": "port_scanner",
+            "source": "127.0.0.1",
+            "severity": "CRITICAL",
+            "attack_type": "Critical Service Exposure",
+            "risk_score": 95,
+            "evidence": [
+                "Port 445 is OPEN (SMB (Windows File Sharing) - Extremely risky if exposed to internet.)"
+            ],
+            "recommended_action": "IMMEDIATELY block this port on the external firewall. Use a VPN for access.",
+            "open_ports": [
+                445
+            ]
+        },
+        {
+            "alert_id": "ALERT-5054",
+            "timestamp": "[2026-06-09 22:41:10]",
+            "module": "port_scanner",
+            "source": "192.168.1.100",
+            "severity": "HIGH",
+            "attack_type": "Risky Service Exposure",
+            "risk_score": 75,
+            "evidence": [
+                "Port 22 is OPEN (SSH)"
+            ],
+            "recommended_action": "Restrict access to trusted IPs only."
+        }
+    ]
+}

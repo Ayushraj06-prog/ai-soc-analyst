@@ -1,0 +1,3 @@
+{"timestamp":"2026-10-01T01:00:00Z","event_type":"account_created","hostname":"windows-lab.example","username":"alice","target_user":"newuser","source_ip":"198.51.100.10","message":"synthetic account creation"}
+{"timestamp":"2026-10-01T01:00:01Z","event_type":"group_membership_change","hostname":"windows-lab.example","username":"alice","target_user":"newuser","source_ip":"198.51.100.10","group_name":"Administrators","message":"synthetic group change"}
+{"timestamp":"2026-10-01T01:00:02Z","event_type":"auth_success","hostname":"windows-lab.example","username":"newuser","source_ip":"198.51.100.10","message":"synthetic authentication"}

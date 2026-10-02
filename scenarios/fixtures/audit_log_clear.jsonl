@@ -1,0 +1,1 @@
+{"timestamp":"2026-10-01T03:00:00Z","event_type":"audit_log_cleared","hostname":"audit-lab.example","username":"alice","source_ip":"192.0.2.30","message":"synthetic Windows Security audit log clear event"}

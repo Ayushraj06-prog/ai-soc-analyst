@@ -1,0 +1,14 @@
+{
+  "attack_version": "19.2",
+  "domain": "enterprise-attack",
+  "source": "https://attack.mitre.org/techniques/",
+  "verified_on": "2026-10-01",
+  "techniques": {
+    "T1110": {"technique_id": "T1110", "technique_name": "Brute Force", "name": "Brute Force", "tactic_ids": ["TA0006"], "attack_version": "19.2", "status": "active", "verification": {"verified_on": "2026-10-01", "source_url": "https://attack.mitre.org/techniques/T1110/"}},
+    "T1098": {"technique_id": "T1098", "technique_name": "Account Manipulation", "name": "Account Manipulation", "tactic_ids": ["TA0003", "TA0004"], "attack_version": "19.2", "status": "active", "verification": {"verified_on": "2026-10-01", "source_url": "https://attack.mitre.org/techniques/T1098/"}},
+    "T1136": {"technique_id": "T1136", "technique_name": "Create Account", "name": "Create Account", "tactic_ids": ["TA0003"], "attack_version": "19.2", "status": "active", "verification": {"verified_on": "2026-10-01", "source_url": "https://attack.mitre.org/techniques/T1136/"}},
+    "T1543.003": {"technique_id": "T1543.003", "technique_name": "Create or Modify System Process: Windows Service", "name": "Create or Modify System Process: Windows Service", "tactic_ids": ["TA0003", "TA0004"], "attack_version": "19.2", "status": "active", "verification": {"verified_on": "2026-10-01", "source_url": "https://attack.mitre.org/techniques/T1543/003/"}},
+    "T1685.005": {"technique_id": "T1685.005", "technique_name": "Disable or Modify Tools: Clear Windows Event Logs", "name": "Disable or Modify Tools: Clear Windows Event Logs", "tactic_ids": ["TA0112"], "attack_version": "19.2", "status": "active", "verification": {"verified_on": "2026-10-01", "source_url": "https://attack.mitre.org/techniques/T1685/005/"}},
+    "T1070.001": {"technique_id": "T1070.001", "technique_name": "Clear Windows Event Logs (Phase 3 baseline label)", "name": "Clear Windows Event Logs (Phase 3 baseline label)", "tactic_ids": ["TA0005"], "attack_version": "18.x legacy baseline", "status": "legacy_baseline", "superseded_by": "T1685.005", "verification": {"verified_on": "2026-10-01", "source_url": "https://attack.mitre.org/techniques/T1070/001/", "status": "legacy identifier redirects in current ATT&CK; Phase 3 compatibility only"}, "note": "Retained only because the Phase 3 baseline Alert already uses this ID. Not emitted as a Phase 4 mapping."}
+  }
+}

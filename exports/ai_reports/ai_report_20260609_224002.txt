@@ -1,0 +1,9 @@
+========================================
+    AI INCIDENT INVESTIGATION REPORT    
+========================================
+
+Error: Ollama library not installed. Please run `pip install ollama` to use the AI features.
+
+========================================
+Generated Timestamp: 2026-06-09 22:40:02
+========================================

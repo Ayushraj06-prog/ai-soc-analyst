@@ -1,0 +1,3 @@
+{"timestamp":"2026-10-01T05:00:00Z","event_type":"auth_success","hostname":"office-lab.example","username":"alice","source_ip":"192.0.2.40","message":"synthetic routine login"}
+{"timestamp":"2026-10-01T05:05:00Z","event_type":"logoff","hostname":"office-lab.example","username":"alice","source_ip":"192.0.2.40","message":"synthetic routine logout"}
+{"timestamp":"2026-10-01T05:06:00Z","event_type":"network_connection","hostname":"office-lab.example","username":"alice","source_ip":"192.0.2.40","destination_ip":"192.0.2.41","destination_port":443,"protocol":"tcp","message":"synthetic routine network activity"}

@@ -1,0 +1,2 @@
+Oct 01 10:00:01 lab-host sshd[101]: Failed password for alice from 192.0.2.10 port 50100 ssh2
+Oct 01 10:02:17 lab-host sshd[102]: Accepted password for alice from 192.0.2.10 port 50101 ssh2

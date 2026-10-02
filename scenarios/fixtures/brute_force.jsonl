@@ -1,0 +1,6 @@
+{"timestamp":"2026-10-01T00:00:00Z","event_type":"auth_failure","hostname":"lab-host.example","username":"alice","source_ip":"192.0.2.10","message":"synthetic failed login"}
+{"timestamp":"2026-10-01T00:00:01Z","event_type":"auth_failure","hostname":"lab-host.example","username":"alice","source_ip":"192.0.2.10","message":"synthetic failed login"}
+{"timestamp":"2026-10-01T00:00:02Z","event_type":"auth_failure","hostname":"lab-host.example","username":"alice","source_ip":"192.0.2.10","message":"synthetic failed login"}
+{"timestamp":"2026-10-01T00:00:03Z","event_type":"auth_failure","hostname":"lab-host.example","username":"alice","source_ip":"192.0.2.10","message":"synthetic failed login"}
+{"timestamp":"2026-10-01T00:00:04Z","event_type":"auth_failure","hostname":"lab-host.example","username":"alice","source_ip":"192.0.2.10","message":"synthetic failed login"}
+{"timestamp":"2026-10-01T00:00:05Z","event_type":"auth_success","hostname":"lab-host.example","username":"alice","source_ip":"192.0.2.10","message":"synthetic successful login"}

@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "R001": {"enabled": true, "threshold": 5, "window_seconds": 300, "severity": "HIGH", "confidence": 0.9},
+    "R002": {"enabled": true, "threshold": 3, "window_seconds": 300, "severity": "MEDIUM", "confidence": 0.8},
+    "R003": {"enabled": true, "threshold": 1, "window_seconds": 300, "severity": "HIGH", "confidence": 0.9},
+    "R010": {"enabled": true, "threshold": 1, "window_seconds": 300, "severity": "MEDIUM", "confidence": 0.75},
+    "R011": {"enabled": true, "threshold": 1, "window_seconds": 300, "severity": "MEDIUM", "confidence": 0.8},
+    "R020": {"enabled": true, "threshold": 1, "window_seconds": 300, "severity": "MEDIUM", "confidence": 0.85},
+    "R021": {"enabled": true, "threshold": 3, "window_seconds": 300, "severity": "MEDIUM", "confidence": 0.85},
+    "R030": {"enabled": true, "threshold": 1, "window_seconds": 300, "severity": "HIGH", "confidence": 0.95},
+    "R040": {"enabled": true, "threshold": 1, "window_seconds": 300, "severity": "MEDIUM", "confidence": 0.85}
+  },
+  "suppression": {"trusted_users": [], "trusted_source_ips": [], "trusted_hosts": []}
+}

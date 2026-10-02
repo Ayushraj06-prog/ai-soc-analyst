@@ -1,0 +1,9 @@
+{"timestamp":"2026-10-01T04:00:00Z","event_type":"auth_failure","hostname":"multi-stage.example","username":"alice","source_ip":"198.51.100.20","message":"synthetic failure"}
+{"timestamp":"2026-10-01T04:00:01Z","event_type":"auth_failure","hostname":"multi-stage.example","username":"alice","source_ip":"198.51.100.20","message":"synthetic failure"}
+{"timestamp":"2026-10-01T04:00:02Z","event_type":"auth_failure","hostname":"multi-stage.example","username":"alice","source_ip":"198.51.100.20","message":"synthetic failure"}
+{"timestamp":"2026-10-01T04:00:03Z","event_type":"auth_failure","hostname":"multi-stage.example","username":"alice","source_ip":"198.51.100.20","message":"synthetic failure"}
+{"timestamp":"2026-10-01T04:00:04Z","event_type":"auth_failure","hostname":"multi-stage.example","username":"alice","source_ip":"198.51.100.20","message":"synthetic failure"}
+{"timestamp":"2026-10-01T04:00:05Z","event_type":"auth_success","hostname":"multi-stage.example","username":"alice","source_ip":"198.51.100.20","message":"synthetic success"}
+{"timestamp":"2026-10-01T04:00:06Z","event_type":"group_membership_change","hostname":"multi-stage.example","username":"alice","target_user":"alice","group_name":"Administrators","source_ip":"198.51.100.20","message":"synthetic privilege change"}
+{"timestamp":"2026-10-01T04:00:07Z","event_type":"service_created","hostname":"multi-stage.example","username":"alice","service_name":"SyntheticService","source_ip":"198.51.100.20","command_line":"C:\\Lab\\synthetic-service.exe","message":"synthetic service"}
+{"timestamp":"2026-10-01T04:00:08Z","event_type":"audit_log_cleared","hostname":"multi-stage.example","username":"alice","source_ip":"198.51.100.20","message":"synthetic audit clear"}

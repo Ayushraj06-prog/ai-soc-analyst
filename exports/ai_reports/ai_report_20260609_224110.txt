@@ -1,0 +1,11 @@
+========================================
+    AI INCIDENT INVESTIGATION REPORT    
+========================================
+
+Error: Failed to connect to Ollama or generate response: model 'llama3' not found (status code: 404)
+
+Please ensure Ollama is running on your machine and the model 'llama3' is downloaded (run `ollama run llama3`).
+
+========================================
+Generated Timestamp: 2026-06-09 22:41:10
+========================================

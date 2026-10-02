@@ -1,0 +1,34 @@
+=== UNIFIED SOC SECURITY REPORT ===
+
+Generated at: 2026-10-02 17:08:41.165534
+
+--- CORRELATED THREATS ---
+[CRITICAL] Active SSH Brute Force Campaign (HIGH CONFIDENCE)
+Analysis: Target has an exposed SSH port (22) AND is actively receiving numerous failed login attempts.
+
+[CRITICAL] Phishing & Credential Stuffing Attack (MEDIUM CONFIDENCE)
+Analysis: A high-risk phishing URL was detected concurrently with multiple failed logins, suggesting stolen credentials are being tested.
+
+--- INDIVIDUAL ALERTS ---
+ID: alert_be760b7fefe3f315 | Module: url_checker | Source: http://www.secure-login-update.com
+Severity: CRITICAL | Attack Type: Phishing / Social Engineering
+Evidence:
+ - Suspicious keyword found: 'login'
+ - Suspicious keyword found: 'secure'
+ - Suspicious keyword found: 'update'
+
+ID: alert_a32a6d5f42a53495 | Module: log_analyzer | Source: 192.168.1.100
+Severity: HIGH | Attack Type: Brute-Force Attack
+Evidence:
+ - 5 failed login attempts detected.
+
+ID: alert_7ab473e6abebd8c2 | Module: port_scanner | Source: 127.0.0.1
+Severity: CRITICAL | Attack Type: Critical Service Exposure
+Evidence:
+ - Port 445 is OPEN (SMB (Windows File Sharing) - Extremely risky if exposed to internet.)
+
+ID: alert_eb850d7f7cc323f4 | Module: port_scanner | Source: 192.168.1.100
+Severity: HIGH | Attack Type: Risky Service Exposure
+Evidence:
+ - Port 22 is OPEN (SSH)
+

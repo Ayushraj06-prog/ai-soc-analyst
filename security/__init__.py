@@ -1,0 +1,1 @@
+"""Static security verification utilities."""
